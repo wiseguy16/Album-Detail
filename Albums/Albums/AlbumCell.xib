@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11198.2" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="66" id="Rrc-NM-QL3" customClass="AlbumCell" customModule="Albums" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="66"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Rrc-NM-QL3" id="eCo-zE-1SL">
+                <frame key="frameInset" width="375" height="65"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9Y5-I5-if2">
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="9Y5-I5-if2" secondAttribute="height" multiplier="1:1" id="zUU-aL-e8R"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Album Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SOw-oW-rIQ">
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ycp-09-u5l">
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="XMC-NM-Gd9"/>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="ycp-09-u5l" firstAttribute="leading" secondItem="SOw-oW-rIQ" secondAttribute="leading" id="J0i-ho-KQt"/>
+                    <constraint firstItem="9Y5-I5-if2" firstAttribute="top" secondItem="eCo-zE-1SL" secondAttribute="top" id="PC7-Ku-GC5"/>
+                    <constraint firstItem="XMC-NM-Gd9" firstAttribute="centerY" secondItem="9Y5-I5-if2" secondAttribute="centerY" id="Rde-sS-f0D"/>
+                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="SOw-oW-rIQ" secondAttribute="trailing" constant="8" id="Tgb-nb-rF9"/>
+                    <constraint firstAttribute="bottom" secondItem="9Y5-I5-if2" secondAttribute="bottom" id="YjS-ZP-Wc9"/>
+                    <constraint firstItem="SOw-oW-rIQ" firstAttribute="top" secondItem="eCo-zE-1SL" secondAttribute="top" constant="8" id="dRK-bi-JCE"/>
+                    <constraint firstItem="ycp-09-u5l" firstAttribute="top" secondItem="SOw-oW-rIQ" secondAttribute="bottom" constant="7" id="v3q-wr-Tru"/>
+                    <constraint firstItem="XMC-NM-Gd9" firstAttribute="centerX" secondItem="9Y5-I5-if2" secondAttribute="centerX" id="vnB-Tb-Cr2"/>
+                    <constraint firstItem="9Y5-I5-if2" firstAttribute="leading" secondItem="eCo-zE-1SL" secondAttribute="leading" id="vuk-Tn-0UC"/>
+                    <constraint firstItem="SOw-oW-rIQ" firstAttribute="leading" secondItem="9Y5-I5-if2" secondAttribute="trailing" constant="8" id="wyR-PL-dSu"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="activityView" destination="XMC-NM-Gd9" id="J9w-Xb-e7A"/>
+                <outlet property="artworkImageView" destination="9Y5-I5-if2" id="Pzz-zz-NbI"/>
+                <outlet property="priceLabel" destination="ycp-09-u5l" id="LQf-rR-Mjg"/>
+                <outlet property="titleLabel" destination="SOw-oW-rIQ" id="lZ2-j2-o6D"/>
+            </connections>
+            <point key="canvasLocation" x="-209.5" y="-2"/>
+        </tableViewCell>
+    </objects>
+</document>
